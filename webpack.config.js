@@ -25,7 +25,7 @@ module.exports = {
         }
       },
       {
-        test: /\.s(c|a)ss$/,
+        test: /\.s?(c|a)ss$/,
         use: [
           isProduction ? MiniCssExtractPlugin.loader :          
           {loader: 'style-loader', options: {sourceMap: true}},
