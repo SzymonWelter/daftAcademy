@@ -1,9 +1,9 @@
 export default function(){
     const header = document.createElement('header');
     const logo = document.createElement('a');
-    header.className = 'logo-header';
-    logo.className = 'logo';
+    header.className = 'main-header';
+    logo.className = 'logo-header';
     logo.innerHTML = 'd\'inks';
-    header.appendChild(logo); 
+    header.appendChild(logo);
     return header;
 }
