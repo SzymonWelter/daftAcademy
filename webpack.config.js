@@ -33,6 +33,13 @@ module.exports = {
           {loader: 'sass-loader', options: {sourceMap: isProduction}},
           {loader: 'postcss-loader', options: {sourceMap: isProduction}},
         ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'url-loader?limit=10000',
+          'img-loader'
+        ]
       }
     ]
   },
