@@ -1,0 +1,43 @@
+@import '../abstracts/colors.scss';
+.main-nav{
+    padding: 20px;
+    max-width: 70vw;
+    margin: auto;
+    margin-bottom: 20px;
+    ul {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        li {
+            display: block;
+            flex-grow: 1;
+            text-align: center;
+            a {
+                display: block;
+                font-size: 15px;
+                text-decoration: none;
+                color: $unactive-nav;
+                &:hover{
+                    text-decoration: underline;
+                    color: $hover-nav;
+                }
+                &.active{
+                    text-decoration: underline;
+                    color: $active-nav;
+                    cursor: default;
+                    font-weight: 600;
+                }
+            }
+        }
+        
+    }
+    @media screen and (max-width: 800px) {
+        ul{
+            display: block;
+        }
+    }
+    
+   
+}

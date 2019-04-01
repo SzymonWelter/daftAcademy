@@ -1,9 +1,9 @@
-import '../reset.scss';
+import './sass/base/_reset.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './main.scss';
-import getMainView from './mainView';
-import getFooter from './logo';
-import getLogo from './footer';
+import './sass/main.scss';
+import getMainView from './js/mainView';
+import getFooter from './js/logo';
+import getLogo from './js/footer';
 
 const { body } = document;
 const root = document.createElement('div');

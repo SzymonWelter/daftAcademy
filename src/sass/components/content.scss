@@ -1,0 +1,56 @@
+@import '../abstracts/size-and-auto-margin.scss';
+@import '../abstracts/colors.scss';
+.content{ 
+    @include size-and-auto-margin(90vw,90vh);
+    background-color: $content-background;
+    padding: 5vh;
+}
+
+.scrollbox{
+    @include size-and-auto-margin(70vw,70vh);
+    overflow: auto;
+    a{
+        
+        cursor: pointer;
+        position: relative;
+        margin: auto;
+        .imgtitle{
+            position: absolute;
+            top: 0%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            font-weight: 700;
+        }
+        img{
+            width: 90%;
+            margin-bottom: 40px;
+            &:hover{
+                border-style: solid;
+                border-color: $item-border-color;
+                border-width: 5px;      
+            }
+        }   
+    }
+    &::-webkit-scrollbar
+    {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: $scrollbar-background;
+    } 
+}
+
+@media screen and (max-width: 800px) {
+    .scrollbox{
+        height: 40vh;
+    }
+}

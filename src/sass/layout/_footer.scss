@@ -1,0 +1,32 @@
+@import '../abstracts/size-and-auto-margin.scss';
+@import '../abstracts/colors.scss';
+
+footer{
+    @include size-and-auto-margin(90vw, 5vh);
+    display: flex;
+    .sayhello{        
+        display: flex;
+        flex: 50%;
+        label{
+            color: $footer-color;
+        }
+        .sayhellow__mail{
+            color:$mail-color;
+        }
+    }
+    .followus{
+        display: flex;
+        label{
+            color: $footer-color;
+        }   
+        .followus__icon{
+            width: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .followus__icon--fb, .followus__icon--instagram, .followus__icon--ball{
+            width: 100%;
+            opacity: 0.5;
+        }
+    }
+}

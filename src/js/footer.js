@@ -1,6 +1,6 @@
-import fbimg from './img/fb-footer-icon.svg';
-import instimg from './img/instagram-logo.svg';
-import ballimg from './img/ball-icon.svg';
+import fbimg from '../img/fb-footer-icon.svg';
+import instimg from '../img/instagram-logo.svg';
+import ballimg from '../img/ball-icon.svg';
 
 export default function(){
     const footer = document.createElement('footer');
@@ -19,19 +19,19 @@ export default function(){
     footer.className = 'main-footer';
     sayhello.className = 'sayhello';   
     followus.className = 'followus';
-    fb.className = 'icon';
-    instagram.className = 'icon';
-    ball.className = 'icon';
-    fbicon.className = 'icon-fb';
-    instagramicon.className = 'icon-instagram';
-    ballicon.className = 'icon-ball';
+    fb.className = 'followus__icon';
+    instagram.className = 'followus__icon';
+    ball.className = 'followus__icon';
+    fbicon.className = 'followus__icon--fb';
+    instagramicon.className = 'followus__icon--instagram';
+    ballicon.className = 'followus__icon--ball';
     fbicon.src = fbimg;
     instagramicon.src = instimg;
     ballicon.src = ballimg;
 
     sayhellolabel.innerHTML = 'Say hello! - ';
 
-    email.className = 'mail';
+    email.className = 'sayhellow__mail';
     email.innerHTML = 'hi@dinks.com';
 
     followuslabel.innerHTML = 'Follow us';

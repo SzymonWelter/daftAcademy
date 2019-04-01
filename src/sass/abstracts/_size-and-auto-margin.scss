@@ -1,0 +1,7 @@
+@mixin size-and-auto-margin($w: 100px, $h: 100px){
+    max-width: $w;
+    width: $w;
+    max-height: $h;
+    height: $h;
+    margin: auto;
+}
