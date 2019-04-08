@@ -9,8 +9,7 @@
 .scrollbox{
     @include size-and-auto-margin(70vw,70vh);
     overflow: auto;
-    a{
-        
+    a{       
         cursor: pointer;
         position: relative;
         margin: auto;
@@ -52,5 +51,11 @@
 @media screen and (max-width: 800px) {
     .scrollbox{
         height: 40vh;
+    }
+}
+
+#root{
+    div{
+        display: inline;
     }
 }
