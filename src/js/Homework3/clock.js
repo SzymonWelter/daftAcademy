@@ -8,7 +8,7 @@ export default function (domElement) {
     domElement.appendChild(sblock);
     var start = new Date();
     var sh = start.getHours();
-    var hgen = timeGen(sh ? sh-12 : sh ,13, 1);
+    var hgen = timeGen(sh > 12 ? sh-12 : sh ,13, 1);
     var mgen = timeGen(start.getMinutes(),60);
     var sgen = timeGen(start.getSeconds(),60);
 
