@@ -9,6 +9,11 @@ function promiseAll(promises) {
 
 function promiseRace(promises) {    
     return new Promise((resolve, reject)=>{
+        for(let p of promises)
+            if(Promise.resolve(p) != p){
+                resolve(p);
+                return;
+            }
         promises.forEach(async p => await p.then(resolve).catch(reject));
     })
 }
@@ -34,11 +39,11 @@ promiseAll([futureSuccess(1), Promise.reject('X'), futureSuccess(3)])
         }
         console.log('To powinien być X:', error);
     });
-/*
+
 promiseRace([1, 2, 3]).then(result => {
     console.log('This should be 1:', result);
 });
-*/
+
 const now = performance.now();
 promiseRace([delayedSuccess(1, 300), delayedSuccess(2, 200), delayedSuccess(3, 100)]).then(result => {
     const after = performance.now();
