@@ -65,7 +65,7 @@ promiseRace([futureSuccess(1), Promise.reject('X'), futureSuccess(3)])
 
 function futureSuccess(val) {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(val), Math.Random() * 500);
+        setTimeout(() => resolve(val), Math.Random * 500);
     });
 };
 
