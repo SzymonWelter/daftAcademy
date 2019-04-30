@@ -1,6 +1,8 @@
-export function fib(num){
-    if( !Number.isInteger(num) || num < 1 )
-        return -1;
+function fib(num){
+    if( !Number.isInteger(num) || num < 0 )
+        throw new Error("wrong input: " + num);
+    if(num == 0)
+        return [];
     var res = [0];
     if(num == 1)
         return res;
@@ -12,3 +14,4 @@ export function fib(num){
     }
     return res;     
 }
+module.exports = fib;
